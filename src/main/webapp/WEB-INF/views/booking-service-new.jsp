@@ -161,21 +161,6 @@ if (session.getAttribute("name") == null) {
                 </div>
 
                 <div class="space-y-6 mb-8">
-                    <!-- Sender Information -->
-                    <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-4">
-                        <h4 class="font-semibold text-gray-800 mb-3 flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                            </svg>
-                            Sender Information
-                        </h4>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                            <div><span class="font-medium text-gray-600">Name:</span> <span id="confirmSenderName" class="text-gray-800"></span></div>
-                            <div><span class="font-medium text-gray-600">Mobile:</span> <span id="confirmSenderMobile" class="text-gray-800"></span></div>
-                            <div class="md:col-span-2"><span class="font-medium text-gray-600">Address:</span> <span id="confirmSenderAddress" class="text-gray-800"></span></div>
-                        </div>
-                    </div>
-
                     <!-- Receiver Information -->
                     <div class="bg-gradient-to-r from-pink-50 to-red-50 rounded-xl p-4">
                         <h4 class="font-semibold text-gray-800 mb-3 flex items-center">
@@ -568,11 +553,6 @@ if (session.getAttribute("name") == null) {
         // Function to populate confirmation modal
         function populateConfirmationModal() {
             const formData = getFormValues();
-            
-            // Populate sender information
-            document.getElementById("confirmSenderName").textContent = formData.senderName;
-            document.getElementById("confirmSenderMobile").textContent = formData.senderMobile;
-            document.getElementById("confirmSenderAddress").textContent = formData.senderAddress;
             
             // Populate receiver information
             document.getElementById("confirmReceiverName").textContent = formData.receiverName;
